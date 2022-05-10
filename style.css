@@ -1,56 +1,161 @@
-/* * {
-    outline: red solid ;
-} */
+* {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
 .material-symbols-outlined {
     position: relative;
-    top:5px;
-    font-size: 14px;
+    top:6px;
+    font-size: 12px;
+    right: 5px;
   }
 
 #container {
     display: grid;
-    grid-template: 20% 1fr/ repeat(5, 1fr);
+    grid-template: 15% 1fr/ 18% repeat(4, 1fr);
 }
 
 #sidebar {
     grid-area: 1/1/3/2;
-    outline: red solid;
     display: grid;
-    grid-template-rows: 80px 30% 1fr;
+    grid-template-rows: 80px 30% 30%;
     grid-template-columns: 1fr;
-    padding-left: 20px;
+    padding-left: 30px;
+    background-color: rgb(62, 158, 203);
+    color: white;
 }
 
-.menu {
-    display: flex;
-    flex-direction: column;
-    font-size: 16px;
+#sidebarTop {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 10px;
 }
+
+ #dashboardIcon {
+    font-size: 30px;
+    right: 5px;
+} 
+
+#sidebarMid, #sidebarBtm {
+    display: grid;
+    grid-template-rows: repeat(7,1fr);
+    font-size: 15px;
+}
+
 
 
 #header {
     grid-area: 1/2/2/6;
-    outline: red solid;
     display: grid;
     grid-template-rows: 40% 60%;
+    border-bottom: 2px black solid;
+    padding-bottom: 20px;
 }
 
 #headerTop {
     grid-row: 1/2;
+    display: grid;
+    grid-column: 1fr 1fr 1fr;
+    margin-top: 11px;
+}
+
+
+#searchBar {
+    margin-left: 20px;
+    grid-column:1/3;
+}
+
+#searchBar>button {
+    border: none;
+    background-color: transparent;
+    position: relative;
+    top: 2.5px;
+    left: 8px;
+}
+
+#searchBar>input {
+    width: 30rem;
+    height: 1.3rem;
+    border-radius: 1rem;
+    border: none;
+    background-color: rgb(228, 228, 228);
+}
+
+#notiBar {
+    grid-column: 3/4;
     display: flex;
-    outline: blue solid;
+    justify-content: space-evenly;
+}
+
+#notiBar>img {
+    height: 40px;
+    border-radius: 50%;
+}
+
+#notiBar>a.userName {
+    font-weight: 600;
+    position: relative;
+    top:10px;
+}
+
+#notiBar>a.notiIcon {
+    position: relative;
+    top: 3px;;
 }
 
 #headerBtm {
     grid-row: 2/3;
-    display: flex;
-    outline: blue solid;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
 }
 
+#userProfile {
+    display: grid;
+    grid-template-columns: 20% 1fr;
+
+}
+
+#userProfile>img {
+    grid-column: 1/2;
+    width: 60px;
+    border-radius: 50%;
+    margin:auto;
+}
+
+#profileRight{
+    grid-column: 2/3;
+    align-items: center;
+    position: relative;
+    right: 20px;
+}
+
+#profileRight>p {
+    font-size: 14px;
+    position: relative;
+    top: 10px;
+}
+
+#profileRight>h2 {
+    font-size: 20px;
+    position: relative;
+    bottom: 5px;
+}
+
+#actionBar {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#actionBar>* {
+    background-color: rgb(56, 148, 197);
+    color: white;
+    height: 2rem;
+    width: 5rem;
+    border-radius: 1rem;
+    border: none;
+}
 
 #projectBoard {
     grid-area: 2/2/3/5;
-    outline: red solid;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 3rem repeat(3, 1fr);
@@ -62,7 +167,6 @@
 
 #annouceAndTrend {
     grid-area: 2/5/3/6;
-    outline: red solid;
     display: grid;
     grid-row: 3rem 1fr 3rem 1fr;
 }
