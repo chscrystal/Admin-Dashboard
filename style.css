@@ -10,7 +10,7 @@
 
 #container {
     display: grid;
-    grid-template: 15% 1fr/ 18% repeat(4, 1fr);
+    grid-template: 18% 1fr/ 18% repeat(4, 1fr);
 }
 
 #sidebar {
@@ -46,8 +46,8 @@
     grid-area: 1/2/2/6;
     display: grid;
     grid-template-rows: 40% 60%;
-    border-bottom: 2px black solid;
-    padding-bottom: 20px;
+    border-bottom: 2px rgb(196, 195, 195) solid;
+    padding-bottom: 15px;
 }
 
 #headerTop {
@@ -152,22 +152,120 @@
     width: 5rem;
     border-radius: 1rem;
     border: none;
+    position: relative;
+    top:5px;
 }
 
 #projectBoard {
     grid-area: 2/2/3/5;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 3rem repeat(3, 1fr);
+    grid-template-rows: 2rem repeat(3, 1fr);
+    background-color: rgba(226, 229, 236, 0.908);
+    gap: 30px;
+    padding: 0 30px 20px 30px;
 }
 
 #projectBoard>h3 {
     grid-column: 1/3;
 }
 
+.projectCard {
+    background-color: white;
+    border-radius: 0.5rem;
+    border-left: 0.5rem rgb(228, 190, 2) solid;
+    box-shadow: 0px 4px 6px -5px #000000;
+    position: relative;
+}
+
+.projectCard>h4 {
+    text-align: center;
+}
+
+.projectCard>p {
+    color: gray;
+    padding: 20px;
+    font-size: 14px;
+    position: relative;
+    bottom: 30px;
+}
+
+.viewProjButton {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+
+}
+
 #annouceAndTrend {
     grid-area: 2/5/3/6;
     display: grid;
     grid-row: 3rem 1fr 3rem 1fr;
+    background-color: rgba(226, 229, 236, 0.908);
 }
 
+#annouceCard, #trendCard {
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0px 4px 6px -5px #000000;
+    margin-right: 30px;
+    height: 320px;
+    font-size: 13px;
+}
+
+#annouceCard {
+    display: grid;
+    grid-template-rows: repeat(3,1fr);
+    padding: 0px 30px 20px 30px;
+}
+
+#annouceOne, #annouceTwo {
+    border-bottom: rgb(201, 201, 201) 1px solid;
+}
+
+#annouceCard>div>h4{
+    position: relative;
+    top: 10px;
+}
+
+#annouceCard>div>p {
+    color: gray;
+}
+
+
+#trendCard {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    padding: 10px 30px 5px 15px;
+    gap:0px;
+    margin-bottom: 20px;
+}
+
+.user>img {
+    height: 48px;
+    border-radius: 50%;
+    grid-area: 1/1/3/2;
+    display: block;
+    margin: 10px;
+}
+.user {
+    height: 40px;
+    width: 200px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 2fr;
+}
+
+.name {
+    grid-area:1/2/2/3 ;
+    align-self:baseline;
+    position: relative;
+    top:0px;
+}
+
+.bio {
+    grid-area: 2/2/3/3;
+    position: relative;
+    bottom: 22px;
+    color:rgb(110, 108, 108);
+}
